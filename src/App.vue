@@ -78,6 +78,8 @@ html, body, #app {
 }
 
 #app {
+  min-height: 100%;
+  height: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -162,11 +164,15 @@ html, body, #app {
   display: none !important;
 }
 
-.bookend, .iconlink {
+.bookend {
   vertical-align: top;
   color: var(--gr1);
   font-size: 1.25rem;
   font-family: "computo-monospace-font"
+}
+.iconlink {
+  color: var(--gr2);
+  font-size: 1.25rem;
 }
 .iconlink:hover, .iconlink:focus {
   color: var(--gr1);
@@ -175,6 +181,7 @@ html, body, #app {
 ul {
   text-align: justify;
   list-style-type: square;
+  padding-right: 1.25rem;
 }
 a {
   text-decoration: none;

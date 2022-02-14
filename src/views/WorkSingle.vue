@@ -1,7 +1,7 @@
  <template>
   <div class="content">
     <router-link to="/work">
-      <span class="iconlink">↩</span>
+      <span class="iconlink" v-html="'<<'"></span>
     </router-link>
     <div v-if="data">
       <fragment v-if="data.title">
@@ -44,3 +44,13 @@ export default {
   }
 }
 </script>
+<style scoped>
+h1 {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--gr2);
+}
+h1:hover, h1:focus {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--gr1); 
+}
+</style>

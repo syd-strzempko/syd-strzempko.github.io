@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .tile:hover, .tile:focus {
   border: 0.25rem dashed var(--pink1);
 }

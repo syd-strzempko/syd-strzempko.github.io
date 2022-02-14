@@ -3,14 +3,14 @@
     <router-link to="/art">Back to List</router-link>
     <div v-if="data" class="carousel">
       <router-link v-if="!isLast" :to="{ name: 'artsingle', params: { id: (data.art.id + 1) }}">
-        <span class="iconlink">↩</span>
+        <span class="iconlink" v-html="'<<'"></span>
       </router-link>
-      <span v-else class="iconlink empty">↩</span>
+      <span v-else class="iconlink empty" v-html="'<<'"></span>
       <img :src="data.art.pathLong" />
       <router-link v-if="!isFirst" :to="{ name: 'artsingle', params: { id: (data.art.id - 1) }}">
-        <span class="iconlink">↪</span>
+        <span class="iconlink" v-html="'>>'"></span>
       </router-link>
-      <span v-else class="iconlink empty">↪</span>
+      <span v-else class="iconlink empty" v-html="'>>'"></span>
     </div>
   </div>
 </template>
