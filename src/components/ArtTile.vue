@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style>
+.tile:hover, .tile:focus {
+  border: 0.25rem dashed var(--pink1);
+}
 .tile.progressive {
   width: 150px;
   height: 150px;

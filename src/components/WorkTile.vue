@@ -20,17 +20,19 @@ export default {
 .tile {
   display: flex;
   flex-flow: row nowrap;
-  padding: 0 0 .5rem;
+  padding: 0 0 .75rem;
 }
 .tile .timespan {
-  font-family: "AlbertusMT";
+  font-family: "digital-7-font";
   text-align: left;
   padding-top: 2px;
   flex: 1;
+  white-space: nowrap;
 }
 a {
   margin-left: 2rem;
   text-align: left;
+  flex: 3;
 }
 @media only screen and (min-width: 600px) {
   .tile .timespan {

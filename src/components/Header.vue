@@ -15,3 +15,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+h1 {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--gr2);
+}
+</style>
