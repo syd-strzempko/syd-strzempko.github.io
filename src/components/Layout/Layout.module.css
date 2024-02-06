@@ -1,4 +1,4 @@
-.layoutWrapper {
+.layout {
     height: 100%;
     width: 100%;
     display: flex;
@@ -7,8 +7,16 @@
     align-items: center;
     background-color: var(--white);
 }
+.content {
+    background-color: var(--light1);
+    border: 2px solid var(--beige1);
+    color: var(--beige2);
+    flex: 1;
+    margin: 20px auto;
+    padding: 10px;
+}
 @media screen and (max-width: 600px) {
-    .layoutWrapper {
+    .layout {
         flex-flow: row nowrap;
     }
 }
