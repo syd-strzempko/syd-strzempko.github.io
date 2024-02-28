@@ -7,16 +7,43 @@
     align-items: center;
     background-color: var(--white);
 }
+.contentWrapper {
+    width: 100%;
+    overflow-y: scroll;
+    flex: 1;
+}
 .content {
     background-color: var(--light1);
-    border: 2px solid var(--beige1);
+    border: 2px solid var(--light2);
     color: var(--beige2);
-    flex: 1;
-    margin: 20px auto;
+    margin: 20px 25%;
     padding: 10px;
+}
+.backButton {
+    font-variant: small-caps;
+}
+.header {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--beige1);
+}
+.body {
+    line-height: 1.25rem;
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    img {
+        max-width: 100%;
+    }
 }
 @media screen and (max-width: 600px) {
     .layout {
         flex-flow: row nowrap;
+        align-items: stretch;
+    }
+    .content {
+        width: 100%;
+        margin: 0;
     }
 }

@@ -1,24 +1,20 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import { ThemeProvider } from 'styled-components';
-// import theme from './theme/theme'
-import ArtList from './pages/ArtList';
-import ArtSingle from './pages/ArtSingle';
-import WorkList from './pages/WorkList';
-import WorkSingle from './pages/WorkSingle';
-import Home from './pages/Home';
+import { ArtList, ArtSingle } from './features/art';
+import { WorkList, WorkSingle } from './features/work';
+import Home from './features/Home';
 
 const router = createBrowserRouter([
   { path: "/", Component: Home },
-  { path: "/work/*", 
+  { path: "/work", 
     children: [
       { index: true, Component: WorkList },
-      { path: "*", Component: WorkSingle },
+      { path: "/work/:id", Component: WorkSingle },
     ]
   },
-  { path: "/art/*", 
+  { path: "/art", 
     children: [
       { index: true, Component: ArtList },
-      { path: "*", Component: ArtSingle },
+      { path: "/art/:id", Component: ArtSingle },
     ]
   }
 ]);

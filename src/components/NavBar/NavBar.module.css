@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--light1);
-    border: 2px solid var(--beige1);
+    border: 2px solid var(--light2);
     a {
         padding: 10px;
     }

@@ -1,0 +1,51 @@
+.title {
+    text-align: center;
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+}
+.wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+.line {
+    border-left: 3px solid var(--link-active);
+    padding-left: 11px;
+    margin: 20px 0;
+}
+.listWrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.nonlined {
+    padding-left: 13.5px;
+}
+.listItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+.listRole {
+    color: var(--beige1);
+    font-style: italic;
+}
+.point {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 3px solid var(--link-active);
+    background-color: var(--white);
+    margin-left: -20px;
+}
+.point:hover {
+    background-color: var(--link-active);
+}
+.tooltip {
+    background-color: var(--white) !important;
+    border: 2px solid var(--light2) !important;
+    border-radius: 15px !important;
+    color: var(--beige2) !important;
+    opacity: 1 !important;
+}
