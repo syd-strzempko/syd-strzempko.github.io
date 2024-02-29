@@ -4,7 +4,7 @@ import { Tooltip } from 'react-tooltip';
 import cn from 'classnames';
 import { selectJobs, selectProjects } from '../workSlice';
 import Layout from '../../../components/Layout';
-import styles from './WorkList.module.css';
+import styles from '../work.module.css';
 
 export const WorkList = () => {
   const jobs = useSelector(selectJobs);
@@ -15,7 +15,7 @@ export const WorkList = () => {
       <div className={styles.wrapper}>
         <div className={styles.line} />
         <div className={styles.listWrapper}>
-          {jobs.map((job, i) => {
+          {jobs?.map((job, i) => {
             return (
               <div key={i} className={styles.listItem}>
                 <div data-tooltip-id='date-span-tooltip' data-tooltip-content={job.span} className={styles.point} />
@@ -32,7 +32,7 @@ export const WorkList = () => {
       <div className={styles.title}>Projects</div>
       <div className={styles.wrapper}>
         <div className={cn(styles.listWrapper, styles.nonlined)}>
-          {projects.map((project, i) => {
+          {projects?.map((project, i) => {
             return (
               <div key={i} className={styles.listItem}>
                 <div data-tooltip-id='date-span-tooltip' data-tooltip-content={project.span} className={styles.point} />

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Layout from '../../../components/Layout';
 import { selectSingle } from '../workSlice';
-import styles from './WorkSingle.module.css';
+import styles from '../work.module.css';
 
 export const WorkSingle = () => {
   let { id } = useParams();

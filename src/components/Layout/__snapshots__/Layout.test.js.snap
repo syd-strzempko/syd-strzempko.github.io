@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<div
+  className="layout"
+>
+  <div
+    className="navWrapper"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/work"
+      onClick={[Function]}
+    >
+      Work
+    </a>
+    <a
+      href="/art"
+      onClick={[Function]}
+    >
+      Art
+    </a>
+  </div>
+  <div
+    className="contentWrapper"
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      />
+      <div
+        className="body"
+      />
+    </div>
+  </div>
+</div>
+`;
