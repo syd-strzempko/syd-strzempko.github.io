@@ -1,0 +1,30 @@
+.profile {
+    width: 200px;
+    padding-bottom: 10px;
+}
+.title {
+    text-align: center;
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+    font-style: italic;
+}
+.description {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.linkButton {
+    font-variant: small-caps;
+    display: inline-flex;
+    div {
+        padding: 0 3px 4px 0;;
+        transform: rotate(90deg);
+    }
+}
+@media screen and (max-width: 600px) {
+    .description {
+        text-align: left;
+    }
+}

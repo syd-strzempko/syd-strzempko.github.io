@@ -2,48 +2,44 @@
   "name": "syd-strzempko.github.io",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/vue-fontawesome": "^2.0.6",
-    "core-js": "^3.6.5",
-    "progressive-image": "^1.2.0",
-    "vue": "^2.6.11",
-    "vue-fragment": "^1.5.2",
-    "vue-router": "^3.2.0"
+    "@reduxjs/toolkit": "^2.1.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "classnames": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router": "^6.21.3",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.2.0",
+    "react-tooltip": "^5.26.3",
+    "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "^4.5.13",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

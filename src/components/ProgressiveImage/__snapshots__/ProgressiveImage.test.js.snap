@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressiveImage renders correctly 1`] = `
+<img
+  alt="artwork 0"
+  className="tile"
+  src="mock_long.jpg"
+  style={Object {}}
+/>
+`;

@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkSingle renders correctly 1`] = `
+<div
+  className="layout"
+>
+  <div
+    className="navWrapper"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/work"
+      onClick={[Function]}
+    >
+      Work
+    </a>
+    <a
+      href="/art"
+      onClick={[Function]}
+    >
+      Art
+    </a>
+  </div>
+  <div
+    className="contentWrapper"
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="backWrapper"
+      >
+        <a
+          className="backButton"
+          href="/work"
+          onClick={[Function]}
+        >
+          « back
+        </a>
+      </div>
+      <div
+        className="header"
+      >
+        testorg
+      </div>
+      <div
+        className="body"
+      >
+        <div
+          className="title"
+        >
+          test
+        </div>
+        <div
+          className="subTitle"
+        >
+          test
+        </div>
+        <div
+          className="listWrapper"
+        >
+          <div
+            className="listItem"
+          >
+            <div
+              className="bullet"
+            />
+            <span>
+              lorem ipsum etc
+            </span>
+          </div>
+          <div
+            className="listItem"
+          >
+            <div
+              className="bullet"
+            />
+            <span>
+              lorem ipsum esque
+            </span>
+          </div>
+        </div>
+        <div
+          className="linkWrapper"
+        >
+          <a
+            className="linkButton"
+            href="/test"
+            onClick={[Function]}
+          >
+            link 
+            <div>
+              »
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    .tile:hover, .tile:focus {
+        filter: opacity(.5);
+    }
+    .tile {
+        width: 200px;
+        height: 200px;
+    }
+}
+.wrapperSingle {
+    max-height: 100%;
+    max-width: 100%;
+}
+@media screen and (max-width: 600px) {
+    .wrapper .tile {
+        width: 100px;
+        height: 100px;
+    }
+}

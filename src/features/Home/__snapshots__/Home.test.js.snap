@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<div
+  className="layout"
+>
+  <div
+    className="navWrapper"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/work"
+      onClick={[Function]}
+    >
+      Work
+    </a>
+    <a
+      href="/art"
+      onClick={[Function]}
+    >
+      Art
+    </a>
+  </div>
+  <div
+    className="contentWrapper"
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        About Me
+      </div>
+      <div
+        className="body"
+      >
+        <img
+          alt="professional headshot"
+          className="profile"
+          src="profile.jpg"
+        />
+        <div
+          className="title"
+        >
+          Syd Strzempko
+        </div>
+        <div
+          className="description"
+        >
+          <span>
+            Full stack engineer with experience developing high-quality, customer-focused applications.
+          </span>
+          <span>
+            Expertise ranges from polished, modern frontend frameworks to insight-focused surfacing of trends through backend data aggregation.
+          </span>
+          <span>
+            Comfortable working alongside and in tandem with multiple teams to communicate expectations and facilitate combined rollout of cross-domain features.
+          </span>
+          <span>
+            My work history reflects a preference towards mission-driven projects which meaningfully contribute to the improvement of the human experience, whether through the propagation of residential clean energy, identifying misinformation & disinformation in the public sphere, or cultural enrichment in community spaces.
+          </span>
+          <span>
+            I look forward to learning more about the unique challenges of your problem space and to developing maintainable and scalable features to solve them!
+          </span>
+        </div>
+        <a
+          className="linkButton"
+          download={true}
+          href="/Resume_SydStrzempko_2024.pdf"
+          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          résumé 
+          <div>
+            »
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

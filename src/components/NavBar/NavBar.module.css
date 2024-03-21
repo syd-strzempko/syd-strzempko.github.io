@@ -1,0 +1,22 @@
+.navWrapper {
+    width: 100%;
+    margin-bottom: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light1);
+    border: 2px solid var(--light2);
+    a {
+        padding: 10px;
+    }
+    a:hover, a:active {
+        background-color: var(--light2);
+    }
+}
+@media screen and (max-width: 600px) {
+    .navWrapper {
+        border: none;
+        border-bottom: 2px solid var(--light2);
+    }
+}

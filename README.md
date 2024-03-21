@@ -1,24 +1,20 @@
-# syd-strzempko.github.io
+## Personal Website
 
-## Project setup
-```
-npm install
-```
+#### Link
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+[https://syd-strzempko.github.io/](https://syd-strzempko.github.io/)
 
-### Compiles and minifies for production
+#### Deployment Steps
+
 ```
 npm run build
+npm run start # Local server on port 3000
+git push origin gh-pages # Push to github .io page
 ```
 
-### Lints and fixes files
+#### Testing
+
 ```
-npm run lint
+npm run test [ -- -u ] # Flag to update snapshots
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
