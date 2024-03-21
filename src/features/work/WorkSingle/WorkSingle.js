@@ -23,7 +23,7 @@ export const WorkSingle = () => {
           );
         })}
       </div>
-      {single.link && <Link to={single.link} className={styles.linkButton}>link <div>»</div></Link>}
+      {single.link && <div className={styles.linkWrapper}><Link to={single.link} className={styles.linkButton}>link <div>»</div></Link></div>}
     </Layout>
   );
 }

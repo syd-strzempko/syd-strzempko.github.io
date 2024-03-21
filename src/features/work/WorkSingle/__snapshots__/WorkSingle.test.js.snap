@@ -32,13 +32,17 @@ exports[`WorkSingle renders correctly 1`] = `
     <div
       className="content"
     >
-      <a
-        className="backButton"
-        href="/work"
-        onClick={[Function]}
+      <div
+        className="backWrapper"
       >
-        « back
-      </a>
+        <a
+          className="backButton"
+          href="/work"
+          onClick={[Function]}
+        >
+          « back
+        </a>
+      </div>
       <div
         className="header"
       >
@@ -81,16 +85,20 @@ exports[`WorkSingle renders correctly 1`] = `
             </span>
           </div>
         </div>
-        <a
-          className="linkButton"
-          href="/test"
-          onClick={[Function]}
+        <div
+          className="linkWrapper"
         >
-          link 
-          <div>
-            »
-          </div>
-        </a>
+          <a
+            className="linkButton"
+            href="/test"
+            onClick={[Function]}
+          >
+            link 
+            <div>
+              »
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>

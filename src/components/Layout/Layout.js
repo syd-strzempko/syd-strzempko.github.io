@@ -8,7 +8,7 @@ const Layout = ({ header, children, returnURL }) => {
       <NavBar />
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
-          {returnURL && <Link to={returnURL} className={styles.backButton}>« back</Link>}
+          {returnURL && <div className={styles.backWrapper}><Link to={returnURL} className={styles.backButton}>« back</Link></div>}
           <div className={styles.header}>{header}</div>
           <div className={styles.body}>{children}</div>
         </div>

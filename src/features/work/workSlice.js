@@ -104,7 +104,7 @@ export const slice = createSlice({
             org: 'Self-Directed',
             project: 'Neural Network Digit Predictor',
             title: '',
-            link: 'https://tfjs-mnist-predictor.herokuapp.com/',
+            link: 'https://tfjs-on-mnist.onrender.com',
             span: '2019',
             details: [
                 'Built a web app to support an interactive tensorflow-framework neural network classifier',

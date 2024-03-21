@@ -71,8 +71,11 @@ exports[`Home renders correctly 1`] = `
         </div>
         <a
           className="linkButton"
-          href="/"
+          download={true}
+          href="/Resume_SydStrzempko_2024.pdf"
           onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
         >
           résumé 
           <div>
