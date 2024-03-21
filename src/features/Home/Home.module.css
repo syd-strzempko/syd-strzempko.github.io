@@ -13,6 +13,7 @@
     flex-flow: column nowrap;
     gap: 10px;
     padding-bottom: 10px;
+    text-align: center;
 }
 .linkButton {
     font-variant: small-caps;
@@ -20,5 +21,10 @@
     div {
         padding: 0 3px 4px 0;;
         transform: rotate(90deg);
+    }
+}
+@media screen and (max-width: 600px) {
+    .description {
+        text-align: left;
     }
 }

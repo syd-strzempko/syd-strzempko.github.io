@@ -9,7 +9,7 @@ export const ArtSingle = () => {
   let { id } = useParams();
   const art = useSelector((state) => selectArt(state, id));
   return (
-    <Layout header={'Art Project'} returnURL={'/art'}>
+    <Layout header={`Project ${id}`} returnURL={'/art'}>
       <div className={styles.wrapperSingle}>
         <ProgressiveImage image={art} />
       </div>

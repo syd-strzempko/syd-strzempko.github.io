@@ -18,7 +18,7 @@ describe('ProgressiveImage', () => {
   it('renders correctly', () => {
     let view = renderer.create(
       <MemoryRouter>
-        <ProgressiveImage image={MOCKIMAGE} />
+        <ProgressiveImage image={MOCKIMAGE} tile />
       </MemoryRouter>
     );
     expect(view.toJSON()).toMatchSnapshot();

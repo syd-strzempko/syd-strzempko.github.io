@@ -3,7 +3,8 @@
 exports[`ProgressiveImage renders correctly 1`] = `
 <img
   alt="artwork 0"
-  className="image"
+  className="tile"
   src="mock_long.jpg"
+  style={Object {}}
 />
 `;

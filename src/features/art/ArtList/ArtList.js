@@ -14,7 +14,7 @@ export const ArtList = () => {
           return (
             <Link to={`/art/${art.id}`}>
               <div className={styles.tile} key={art.id}>
-                <ProgressiveImage image={art} />
+                <ProgressiveImage image={art} tile />
               </div>
             </Link>
           );
