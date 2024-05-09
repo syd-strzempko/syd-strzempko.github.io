@@ -4,9 +4,9 @@
 }
 .title {
     text-align: center;
-    font-size: 1.25rem;
     padding-bottom: 10px;
     font-style: italic;
+    color: var(--light2);
 }
 .description {
     display: flex;
@@ -16,15 +16,23 @@
     text-align: center;
 }
 .linkButton {
-    font-variant: small-caps;
-    display: inline-flex;
-    div {
-        padding: 0 3px 4px 0;;
-        transform: rotate(90deg);
+    display: flex;
+    flex-flow: column nowrap;
+    height: 50px;
+    margin: auto;
+    color: black;
+    &:active, &:hover {
+        padding: 2px;
+        img {
+            filter: invert(1);
+        }
+    }
+    img {
+        height: 100%;
     }
 }
-@media screen and (max-width: 600px) {
-    .description {
-        text-align: left;
-    }
+.linkText {
+    text-align: center;
+    margin-top: -15px;
+    font-weight: bold;
 }

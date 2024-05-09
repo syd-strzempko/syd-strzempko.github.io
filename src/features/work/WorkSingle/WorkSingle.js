@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Layout from '../../../components/Layout';
 import { selectSingle } from '../workSlice';
 import styles from '../work.module.css';
+import linkButton from '../../../assets/icons/link.svg';
 
 export const WorkSingle = () => {
   let { id } = useParams();
@@ -23,7 +24,11 @@ export const WorkSingle = () => {
           );
         })}
       </div>
-      {single.link && <div className={styles.linkWrapper}><Link to={single.link} className={styles.linkButton}>link <div>»</div></Link></div>}
+      {single.link && <div className={styles.linkWrapper}>
+        <Link to={single.link} className={styles.linkButton}>
+          <img src={linkButton} alt='external link' />
+        </Link>
+      </div>}
     </Layout>
   );
 }
