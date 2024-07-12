@@ -1,34 +1,63 @@
-import { Link } from 'react-router-dom';
+import { Fragment } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import Layout from '../../../components/Layout';
-import { selectSingle } from '../workSlice';
+import { selectSingleComplete } from '../workSlice';
 import styles from '../work.module.css';
+import Layout from '../../../components/Layout';
+import Section from '../../../components/Section';
+import Carousel from '../../../components/Carousel';
+
 import linkButton from '../../../assets/icons/link.svg';
 
 export const WorkSingle = () => {
   let { id } = useParams();
-  const single = useSelector((state) => selectSingle(state, id));
-  return (
-    <Layout header={single.title ? single.org : single.project} returnURL={'/work'}>
-      <div className={styles.title}>{single.title ? single.title : single.org}</div>
-      <div className={styles.subTitle}>{single.span}</div>
-      {single.stack && <div>Stack: {single.stack}</div>}
-      <div className={styles.listWrapper}>
-        {single.details.map((detail, i) => {
-          return (
-            <div key={i} className={styles.listItem}>
-              <div className={styles.bullet} />
-              <span>{detail}</span>
-            </div>
-          );
-        })}
+  const job = useSelector((state) => selectSingleComplete(state, id));
+
+  const renderTop = () => {
+    return (
+      <div className={styles.topWrapper}>
+        <div className={styles.titleWrapper}>
+          <div className={styles.title}>{job.title ? job.org : job.project}</div>
+          <div className={styles.subtitle}>{job.title ? job.title : job.org}</div>
+        </div>
+        {job.link && <Link to={job.link} className={styles.hideMobile}>
+          <img src={linkButton} className={styles.link} alt='external link to site' />
+        </Link>}
       </div>
-      {single.link && <div className={styles.linkWrapper}>
-        <Link to={single.link} className={styles.linkButton}>
-          <img src={linkButton} alt='external link' />
-        </Link>
-      </div>}
+    );
+  };
+
+  const renderJob = () => {
+    return (
+      <Fragment>
+        <div className={styles.hideMobile}>{renderTop()}</div>
+        <div className={styles.midWrapper}>
+          {job?.details?.map((bullet, i) => {
+            return (<div key={i}>- {bullet}</div>);
+          })}
+        </div>
+        {(job.span || job.link) && <div className={styles.bottomWrapper}>
+          {job.span && <div className={styles.span}>{job.span}</div>}
+          {job.link && <Link to={job.link} className={styles.showMobile}>
+            <img src={linkButton} className={styles.link} alt='external link to site' />
+          </Link>}
+        </div>}
+      </Fragment>
+    )
+  };
+
+  const renderImages = (images) => {
+    return (
+      <Fragment>
+        <div className={styles.showMobile}>{renderTop()}</div>
+        <Carousel images={images} />
+      </Fragment>
+    );
+  }
+
+  return (
+    <Layout backLink={'/work'}>
+      <Section left={renderJob()} right={renderImages(job.images)}></Section>
     </Layout>
   );
 }

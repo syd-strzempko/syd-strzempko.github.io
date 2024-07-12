@@ -8,7 +8,7 @@ import styles from '../art.module.css';
 export const ArtList = () => {
   const arts = useSelector(selectArts);
   return (
-    <Layout header={'Visual Art Projects'}>
+    <Layout>
       <div className={styles.wrapper}>
         {arts?.map((art) => {
           return (

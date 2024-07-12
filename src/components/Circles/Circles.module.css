@@ -1,0 +1,28 @@
+.stage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: spin 50s 2s infinite linear;
+    opacity: 0;
+}
+@keyframes spin {
+    0% {
+      transform: rotate( 0deg );
+      opacity: 0;
+    }
+    25% {
+      transform: rotate( 90deg );
+      opacity: .25;
+    }
+    50% {
+      transform: rotate( 180deg );
+      opacity: .5;
+    }
+    75% {
+        transform: rotate( 270deg );
+      }
+    100% {
+      transform: rotate( 360deg );
+    }
+};

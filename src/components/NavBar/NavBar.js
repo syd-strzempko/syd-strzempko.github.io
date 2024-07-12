@@ -7,8 +7,7 @@ import { useState } from 'react';
 import classNames from 'classnames';
 
 const NavBar = () => {
-  const isMobile = window.matchMedia("(max-width: 600px)");
-  const [visible, setVisible] = useState(!(isMobile.matches));
+  const [visible, setVisible] = useState(false);
   return (
     <Fragment>
       <div className={classNames(styles.navWrapper, {[styles.visible]: visible})}>
@@ -16,10 +15,8 @@ const NavBar = () => {
         <Link to={((PATHS['WORK'])())} onClick={() => setVisible(false)}>Work</Link>
         <Link to={((PATHS['ART'])())} onClick={() => setVisible(false)}>Art</Link>
       </div>
-      {isMobile.matches && <Fragment>
-        <div className={classNames(styles.navClose, { [styles.visible]: visible})} onClick={() => setVisible(false)}>X</div>
-        <div className={classNames(styles.navOpen, { [styles.visible]: !visible})} onClick={() => setVisible(true)}><img src={Hamburger} alt='menu'/></div>
-      </Fragment>}
+      <div className={classNames(styles.navClose, { [styles.visible]: visible})} onClick={() => setVisible(false)}>X</div>
+      <div className={classNames(styles.navOpen, { [styles.visible]: !visible})} onClick={() => setVisible(true)}><img src={Hamburger} alt='menu'/></div>
     </Fragment>
   );
 };

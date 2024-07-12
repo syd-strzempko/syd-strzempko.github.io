@@ -8,3 +8,15 @@
     max-height: 100%;
     object-fit: contain;
 }
+.carousel {
+    object-fit: contain;
+    object-position: bottom;
+    max-height: 90vh;
+}
+@media screen and (max-width: 600px) {
+    .carousel {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

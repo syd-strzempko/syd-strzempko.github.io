@@ -1,66 +1,75 @@
 .navWrapper {
-    margin-top: 10px;
-    margin-bottom: auto;
+    font-size: 2rem;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    box-shadow: inset 0px 0px 15px 5px var(--white50);
-    background-color: var(--white10);
-    border-radius: 15px;
-    padding: 8px 15px;
-    a:hover, a:active {
-        background-color: var(--white50);
-        box-shadow: 0px 0px 5px 5px var(--white50);
+    gap: 30px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin: 9px -350px 0 auto;
+    transition: margin-right 1s;
+    &.visible {
+        margin-right: 60px;
+    }
+}
+.navClose, .navOpen {
+    position: fixed;
+    z-index: 2;
+    top: 15px;
+    right: 20px;
+    font-size: 40px;
+    transition: opacity 1s, transform 1s;
+    transform: scale(0);
+    opacity: 0;
+    &.visible {
+        transform: scale(1);
+        opacity: 1;
+        z-index: 3;
+    }
+}
+.navOpen {
+    height: 27px;
+    top: 23px;
+    img {
+        display: inherit;
+        height: 100%;
+        width: 100%;
     }
 }
 @media screen and (max-width: 600px) {
     .navWrapper {
+        backdrop-filter: blur(10px);
+        box-shadow: inset 0px 0px 15px 5px var(--white50);
+        background-color: var(--white10);
         z-index: -1;
         margin-top: 0;
+        margin-bottom: auto;
         position: fixed;
         top: 0;
         height: 100vh;
         width: 100%;
         flex-flow: column nowrap;
-        gap: 30px;
+        justify-content: center;
+        align-items: center;
         padding: 0;
         border-radius: 0;
+        opacity: 0;
+        &.visible {
+            opacity: 1;
+            z-index: 3;
+            margin-right: 0;
+        }
         a {
             width: 100%;
             text-align: center;
             font-size: 35px;
         }
-        transition: opacity 1s;
-        opacity: 0;
-        &.visible {
-            opacity: 1;
-            z-index: 3;
-        }
-    }
-    .navClose, .navOpen {
-        position: fixed;
-        z-index: 2;
-        top: 15px;
-        right: 20px;
-        font-size: 40px;
-        transition: opacity 1s, transform 1s;
-        transform: scale(0);
-        opacity: 0;
-        &.visible {
-            transform: scale(1);
-            opacity: 1;
-            z-index: 3;
-        }
-    }
-    .navOpen {
-        height: 27px;
-        top: 23px;
-        img {
-            display: inherit;
-            height: 100%;
-            width: 100%;
+        a:hover, a:active {
+            background-color: var(--white50);
+            box-shadow: 0px 0px 5px 5px var(--white50);
         }
     }
 }
