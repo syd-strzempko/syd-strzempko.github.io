@@ -49,7 +49,11 @@ const Circles = () => {
   });
 
   return (
-    <Stage className={styles.stage} width={canvasWidth} height={canvasHeight}>
+    <Stage
+      className={styles.stage}
+      width={canvasWidth}
+      height={canvasHeight}
+    >
       <Layer>
         <Circle center={[canvasWidth*.5, canvasHeight*.5]} iters={(canvasWidth < MOBILE_CUTOFF) ? 7 : 9} />
       </Layer>

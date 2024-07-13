@@ -1,7 +1,7 @@
 import { WorkSingle } from './WorkSingle';
 import { MemoryRouter, useParams } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-// import * as Redux from 'react-redux';
+import * as reactRedux from 'react-redux';
 // import { render, screen } from '@testing-library/react';
 
 // Mock the useParams hook
@@ -15,6 +15,8 @@ jest.mock("react-redux", () => ({
     useSelector: jest.fn(),
 }));
 
+jest.mock('../../../components/Circles/Circles');
+
 // Note: MemoryRouter allows for nested Link components to exist inside of & access stack of mocked router
 describe('WorkSingle', () => {
     beforeEach(() => {
@@ -26,48 +28,50 @@ describe('WorkSingle', () => {
 
     const useSelectorMock = reactRedux.useSelector;
     const mockStore = {
-        jobs: [
-            {
-                url: 'job_test',
-                org: 'test',
-                project: 'test',
-                title: 'test',
-                link: '/test',
-                span: 'test',
-                details: ['lorem ipsum etc', 'lorem ipsum esque']
-            }
-        ],
-        projects: [
-            {
-                url: 'project_test',
-                org: 'test',
-                project: 'test',
-                title: 'test',
-                link: '/test',
-                span: 'test',
-                details: ['lorem ipsum etc', 'lorem ipsum esque']
-            }
-        ],
-        images: [
-            {  
-                pathLong: 'mock_long.jpg',
-                pathShort: '/job_test/mock_short.jpg',
-                id: 0,
-                compressed: {
-                    pathLong: 'mock_long.jpg',
-                    pathShort: 'mock_short.jpg'
+        work: {
+            jobs: [
+                {
+                    url: 'job_test',
+                    org: 'test',
+                    project: 'test',
+                    title: 'test',
+                    link: '/test',
+                    span: 'test',
+                    details: ['lorem ipsum etc', 'lorem ipsum esque']
                 }
-            },
-            {  
-                pathLong: 'mock_long.jpg',
-                pathShort: '/project_test/mock_short.jpg',
-                id: 0,
-                compressed: {
-                    pathLong: 'mock_long.jpg',
-                    pathShort: 'mock_short.jpg'
+            ],
+            projects: [
+                {
+                    url: 'project_test',
+                    org: 'test',
+                    project: 'test',
+                    title: 'test',
+                    link: '/test',
+                    span: 'test',
+                    details: ['lorem ipsum etc', 'lorem ipsum esque']
                 }
-            }
-        ],
+            ],
+            images: [
+                {  
+                    pathLong: 'mock_long.jpg',
+                    pathShort: '/job_test/mock_short.jpg',
+                    id: 0,
+                    compressed: {
+                        pathLong: 'mock_long.jpg',
+                        pathShort: 'mock_short.jpg'
+                    }
+                },
+                {  
+                    pathLong: 'mock_long.jpg',
+                    pathShort: '/project_test/mock_short.jpg',
+                    id: 0,
+                    compressed: {
+                        pathLong: 'mock_long.jpg',
+                        pathShort: 'mock_short.jpg'
+                    }
+                }
+            ],
+        }
     };
 
     test('renders correctly with job', () => {
