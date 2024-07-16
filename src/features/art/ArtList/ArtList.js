@@ -8,11 +8,11 @@ import styles from '../art.module.css';
 export const ArtList = () => {
   const arts = useSelector(selectArts);
   return (
-    <Layout header={'Visual Art Projects'}>
+    <Layout>
       <div className={styles.wrapper}>
         {arts?.map((art) => {
           return (
-            <Link to={`/art/${art.id}`}>
+            <Link to={`/art/${art.id}`} key={art.id}>
               <div className={styles.tile} key={art.id}>
                 <ProgressiveImage image={art} tile />
               </div>

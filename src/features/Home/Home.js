@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
 import { Fragment } from 'react';
 import Layout from '../../components/Layout';
+import ProgressiveImage from '../../components/ProgressiveImage';
 import profile from '../../assets/profile.jpg';
 import linkButton from '../../assets/icons/link.svg';
 import styles from './Home.module.css';
 
 const Home = () => {
   return (
-    <Layout header={'About Me'}>
-      <Fragment>
-        <img className={styles.profile} src={profile} alt={'professional headshot'} />
-        <div className={styles.title}>Syd Strzempko</div>
+    <Layout>
+      <div className={styles.profileWrapper}>
+        <div  className={styles.profile}><ProgressiveImage image={profile} alt={'professional headshot'} /></div>
+        <div className={styles.title}><h1>Syd Strzempko</h1></div>
+        <h2>Full-Stack Engineer</h2>
         <div className={styles.description}>
           <span>Full stack engineer with experience developing high-quality, customer-focused applications.</span>
           <span>Expertise ranges from polished, modern frontend frameworks to insight-focused surfacing of trends through backend data aggregation.</span>
@@ -25,9 +27,8 @@ const Home = () => {
           target='_blank' rel='noopener noreferrer'
         >
           <img src={linkButton} alt='external link' />
-          <div className={styles.linkText}>CV</div>
         </Link>
-      </Fragment>
+      </div>
     </Layout>
   );
 }

@@ -9,9 +9,9 @@ export const ArtSingle = () => {
   let { id } = useParams();
   const art = useSelector((state) => selectArt(state, id));
   return (
-    <Layout header={`Project ${id}`} returnURL={'/art'}>
+    <Layout backLink={'/art'}>
       <div className={styles.wrapperSingle}>
-        <ProgressiveImage image={art} />
+        <ProgressiveImage image={art} art />
       </div>
     </Layout>
   );

@@ -1,38 +1,36 @@
 import { WorkSingle } from './WorkSingle';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, useParams } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import * as Redux from 'react-redux';
+import * as reactRedux from 'react-redux';
+import { mockStore } from '../workSlice.test';
 
-jest.mock('react-redux', () => ({
-    ...jest.requireActual('react-redux'),
-    useSelector: jest.fn()
-}));
-
-const MOCKSINGLE = {
-    url: 'test',
-    org: 'testorg',
-    project: '',
-    title: 'test',
-    link: '/test',
-    span: 'test',
-    details: [
-        'lorem ipsum etc',
-        'lorem ipsum esque'
-    ]
-};
+jest.mock('../../../components/Circles/Circles');
 
 // Note: MemoryRouter allows for nested Link components to exist inside of & access stack of mocked router
-
 describe('WorkSingle', () => {
-    beforeEach(() => {
-        jest.spyOn(Redux, 'useSelector').mockReturnValue(MOCKSINGLE);
-    });
-    it('renders correctly', () => {
+    // Mock useSelectors
+    beforeEach(() => { useSelectorMock.mockImplementation(selector => selector(mockStore)); });
+    afterEach(() => { useSelectorMock.mockClear(); });
+
+    const useSelectorMock = reactRedux.useSelector;
+
+    // Unit tests
+    test('renders correctly with job', () => {
+        useParams.mockReturnValue({ id: 'job_test' });
         let view = renderer.create(
             <MemoryRouter>
-            <WorkSingle />
+                <WorkSingle />
             </MemoryRouter>
-        );
-        expect(view.toJSON()).toMatchSnapshot();
+        ).toJSON();
+        expect(view).toMatchSnapshot();
+    });
+    test('renders correctly with project', () => {
+        useParams.mockReturnValue({ id: 'project_test' });
+        let view = renderer.create(
+            <MemoryRouter>
+                <WorkSingle />
+            </MemoryRouter>
+        ).toJSON();
+        expect(view).toMatchSnapshot();
     });
 });

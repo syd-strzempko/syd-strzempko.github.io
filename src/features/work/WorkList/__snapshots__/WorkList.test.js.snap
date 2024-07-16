@@ -1,74 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WorkList renders correctly 1`] = `
-<div
-  className="layout"
->
+Array [
+  <mock-Circles />,
   <div
-    className="navWrapper"
-  >
-    <a
-      href="/"
-      onClick={[Function]}
-    >
-      Home
-    </a>
-    <a
-      href="/work"
-      onClick={[Function]}
-    >
-      Work
-    </a>
-    <a
-      href="/art"
-      onClick={[Function]}
-    >
-      Art
-    </a>
-  </div>
-  <div
-    className="contentWrapper"
+    className="layout"
   >
     <div
-      className="content"
+      className="navWrapper"
     >
-      <div
-        className="header"
+      <a
+        href="/"
+        onClick={[Function]}
       >
-        Work Experience
-      </div>
-      <div
-        className="body"
+        Home
+      </a>
+      <a
+        href="/work"
+        onClick={[Function]}
       >
-        <div
-          className="title"
-        >
-          Jobs
-        </div>
-        <div
-          className="wrapper"
-        >
-          <div
-            className="line"
-          />
-          <div
-            className="listWrapper"
-          />
-        </div>
-        <div
-          className="title"
-        >
-          Projects
-        </div>
-        <div
-          className="wrapper"
-        >
-          <div
-            className="listWrapper nonlined"
-          />
-        </div>
-      </div>
+        Work
+      </a>
+      <a
+        href="/art"
+        onClick={[Function]}
+      >
+        Art
+      </a>
     </div>
-  </div>
-</div>
+    <div
+      className="navClose"
+      onClick={[Function]}
+    >
+      X
+    </div>
+    <div
+      className="navOpen visible"
+      onClick={[Function]}
+    >
+      <img
+        alt="menu"
+        src="hamburger.png"
+      />
+    </div>
+    <div
+      className="wrapper"
+    >
+      <a
+        href="/work/job_test"
+        onClick={[Function]}
+      >
+        <div
+          className="tile"
+        >
+          <img
+            alt="work 0"
+            className="tile"
+            src="mock_long.jpg"
+            style={Object {}}
+          />
+          <div
+            className="tileTitle"
+          >
+            test
+          </div>
+        </div>
+      </a>
+      <a
+        href="/work/project_test"
+        onClick={[Function]}
+      >
+        <div
+          className="tile"
+        >
+          <img
+            alt="work 1"
+            className="tile"
+            src="mock_long.jpg"
+            style={Object {}}
+          />
+          <div
+            className="tileTitle"
+          >
+            test
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>,
+]
 `;

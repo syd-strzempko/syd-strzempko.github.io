@@ -1,106 +1,537 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WorkSingle renders correctly 1`] = `
-<div
-  className="layout"
->
+exports[`WorkSingle renders correctly with job 1`] = `
+Array [
+  <mock-Circles />,
   <div
-    className="navWrapper"
+    className="layout"
   >
-    <a
-      href="/"
+    <div
+      className="navWrapper"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        href="/work"
+        onClick={[Function]}
+      >
+        Work
+      </a>
+      <a
+        href="/art"
+        onClick={[Function]}
+      >
+        Art
+      </a>
+    </div>
+    <div
+      className="navClose"
       onClick={[Function]}
     >
-      Home
-    </a>
+      X
+    </div>
+    <div
+      className="navOpen visible"
+      onClick={[Function]}
+    >
+      <img
+        alt="menu"
+        src="hamburger.png"
+      />
+    </div>
     <a
+      className="backLink"
       href="/work"
       onClick={[Function]}
     >
-      Work
+      <img
+        alt="back"
+        src="arrow.svg"
+      />
     </a>
-    <a
-      href="/art"
-      onClick={[Function]}
-    >
-      Art
-    </a>
-  </div>
-  <div
-    className="contentWrapper"
-  >
     <div
-      className="content"
+      className="section"
     >
       <div
-        className="backWrapper"
-      >
-        <a
-          className="backButton"
-          href="/work"
-          onClick={[Function]}
-        >
-          « back
-        </a>
-      </div>
-      <div
-        className="header"
-      >
-        testorg
-      </div>
-      <div
-        className="body"
+        className="left"
       >
         <div
-          className="title"
-        >
-          test
-        </div>
-        <div
-          className="subTitle"
-        >
-          test
-        </div>
-        <div
-          className="listWrapper"
+          className="body"
         >
           <div
-            className="listItem"
+            className="hideMobile"
           >
             <div
-              className="bullet"
-            />
-            <span>
-              lorem ipsum etc
-            </span>
-          </div>
-          <div
-            className="listItem"
-          >
-            <div
-              className="bullet"
-            />
-            <span>
-              lorem ipsum esque
-            </span>
-          </div>
-        </div>
-        <div
-          className="linkWrapper"
-        >
-          <a
-            className="linkButton"
-            href="/test"
-            onClick={[Function]}
-          >
-            link 
-            <div>
-              »
+              className="topWrapper"
+            >
+              <div
+                className="titleWrapper"
+              >
+                <div
+                  className="title"
+                >
+                  test
+                </div>
+                <div
+                  className="subtitle"
+                >
+                  test
+                </div>
+              </div>
+              <a
+                className="hideMobile"
+                href="/test"
+                onClick={[Function]}
+              >
+                <img
+                  alt="external link to site"
+                  className="link"
+                  src="link.svg"
+                />
+              </a>
             </div>
-          </a>
+          </div>
+          <div
+            className="midWrapper"
+          >
+            <div>
+              - 
+              lorem ipsum etc
+            </div>
+            <div>
+              - 
+              lorem ipsum esque
+            </div>
+          </div>
+          <div
+            className="bottomWrapper"
+          >
+            <div
+              className="span"
+            >
+              test
+            </div>
+            <a
+              className="showMobile"
+              href="/test"
+              onClick={[Function]}
+            >
+              <img
+                alt="external link to site"
+                className="link"
+                src="link.svg"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="showMobile"
+        >
+          <div
+            className="topWrapper"
+          >
+            <div
+              className="titleWrapper"
+            >
+              <div
+                className="title"
+              >
+                test
+              </div>
+              <div
+                className="subtitle"
+              >
+                test
+              </div>
+            </div>
+            <a
+              className="hideMobile"
+              href="/test"
+              onClick={[Function]}
+            >
+              <img
+                alt="external link to site"
+                className="link"
+                src="link.svg"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          className="carousel-root"
+        >
+          <div
+            className="carousel carousel-slider"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <ul
+              className="control-dots"
+            >
+              <li
+                aria-label="slide item 1"
+                className="dot selected"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                tabIndex={0}
+                value={0}
+              />
+            </ul>
+            <button
+              aria-label="previous slide / item"
+              className="control-arrow control-prev control-disabled"
+              onClick={[Function]}
+              type="button"
+            />
+            <div
+              className="slider-wrapper axis-horizontal"
+              style={Object {}}
+            >
+              <ul
+                className="slider animated"
+                style={
+                  Object {
+                    "MozTransitionDuration": "350ms",
+                    "OTransform": "translate3d(-100%,0,0)",
+                    "OTransitionDuration": "350ms",
+                    "WebkitTransform": "translate3d(-100%,0,0)",
+                    "WebkitTransitionDuration": "350ms",
+                    "msTransform": "translate3d(-100%,0,0)",
+                    "msTransitionDuration": "350ms",
+                    "transform": "translate3d(-100%,0,0)",
+                    "transitionDuration": "350ms",
+                  }
+                }
+              >
+                <li
+                  className="slide selected previous"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="work 0"
+                      className="carousel"
+                      src="mock_long.jpg"
+                      style={Object {}}
+                    />
+                  </div>
+                </li>
+                <li
+                  className="slide selected previous"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="work 0"
+                      className="carousel"
+                      src="mock_long.jpg"
+                      style={Object {}}
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button
+              aria-label="next slide / item"
+              className="control-arrow control-next control-disabled"
+              onClick={[Function]}
+              type="button"
+            />
+            <p
+              className="carousel-status"
+            >
+              1 of 1
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
+`;
+
+exports[`WorkSingle renders correctly with project 1`] = `
+Array [
+  <mock-Circles />,
+  <div
+    className="layout"
+  >
+    <div
+      className="navWrapper"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        href="/work"
+        onClick={[Function]}
+      >
+        Work
+      </a>
+      <a
+        href="/art"
+        onClick={[Function]}
+      >
+        Art
+      </a>
+    </div>
+    <div
+      className="navClose"
+      onClick={[Function]}
+    >
+      X
+    </div>
+    <div
+      className="navOpen visible"
+      onClick={[Function]}
+    >
+      <img
+        alt="menu"
+        src="hamburger.png"
+      />
+    </div>
+    <a
+      className="backLink"
+      href="/work"
+      onClick={[Function]}
+    >
+      <img
+        alt="back"
+        src="arrow.svg"
+      />
+    </a>
+    <div
+      className="section"
+    >
+      <div
+        className="left"
+      >
+        <div
+          className="body"
+        >
+          <div
+            className="hideMobile"
+          >
+            <div
+              className="topWrapper"
+            >
+              <div
+                className="titleWrapper"
+              >
+                <div
+                  className="title"
+                >
+                  test
+                </div>
+                <div
+                  className="subtitle"
+                >
+                  test
+                </div>
+              </div>
+              <a
+                className="hideMobile"
+                href="/test"
+                onClick={[Function]}
+              >
+                <img
+                  alt="external link to site"
+                  className="link"
+                  src="link.svg"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            className="midWrapper"
+          >
+            <div>
+              - 
+              lorem ipsum etc
+            </div>
+            <div>
+              - 
+              lorem ipsum esque
+            </div>
+          </div>
+          <div
+            className="bottomWrapper"
+          >
+            <div
+              className="span"
+            >
+              test
+            </div>
+            <a
+              className="showMobile"
+              href="/test"
+              onClick={[Function]}
+            >
+              <img
+                alt="external link to site"
+                className="link"
+                src="link.svg"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="showMobile"
+        >
+          <div
+            className="topWrapper"
+          >
+            <div
+              className="titleWrapper"
+            >
+              <div
+                className="title"
+              >
+                test
+              </div>
+              <div
+                className="subtitle"
+              >
+                test
+              </div>
+            </div>
+            <a
+              className="hideMobile"
+              href="/test"
+              onClick={[Function]}
+            >
+              <img
+                alt="external link to site"
+                className="link"
+                src="link.svg"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          className="carousel-root"
+        >
+          <div
+            className="carousel carousel-slider"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <ul
+              className="control-dots"
+            >
+              <li
+                aria-label="slide item 1"
+                className="dot selected"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                tabIndex={0}
+                value={0}
+              />
+            </ul>
+            <button
+              aria-label="previous slide / item"
+              className="control-arrow control-prev control-disabled"
+              onClick={[Function]}
+              type="button"
+            />
+            <div
+              className="slider-wrapper axis-horizontal"
+              style={Object {}}
+            >
+              <ul
+                className="slider animated"
+                style={
+                  Object {
+                    "MozTransitionDuration": "350ms",
+                    "OTransform": "translate3d(-100%,0,0)",
+                    "OTransitionDuration": "350ms",
+                    "WebkitTransform": "translate3d(-100%,0,0)",
+                    "WebkitTransitionDuration": "350ms",
+                    "msTransform": "translate3d(-100%,0,0)",
+                    "msTransitionDuration": "350ms",
+                    "transform": "translate3d(-100%,0,0)",
+                    "transitionDuration": "350ms",
+                  }
+                }
+              >
+                <li
+                  className="slide selected previous"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="work 1"
+                      className="carousel"
+                      src="mock_long.jpg"
+                      style={Object {}}
+                    />
+                  </div>
+                </li>
+                <li
+                  className="slide selected previous"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <div
+                    className="imageWrapper"
+                  >
+                    <img
+                      alt="work 1"
+                      className="carousel"
+                      src="mock_long.jpg"
+                      style={Object {}}
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button
+              aria-label="next slide / item"
+              className="control-arrow control-next control-disabled"
+              onClick={[Function]}
+              type="button"
+            />
+            <p
+              className="carousel-status"
+            >
+              1 of 1
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
 `;

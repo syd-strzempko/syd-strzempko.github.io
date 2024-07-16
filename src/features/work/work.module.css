@@ -1,96 +1,125 @@
-.title {
-    text-align: center;
-    font-size: 1.25rem;
-    padding-bottom: 10px;
-}
-.subTitle {
-    color: var(--light2);
-    font-style: italic;
-    padding-bottom: 5px;
-}
-.bullet {
-    background-color: var(--link-active);
-    min-width: 5px;
-    height: 5px;
-    margin: 5px;
-}
-.linkButton {
-    align-self: self-end;
-    display: inline-flex;
-    height: 70px;
-    &:active, &:hover {
-        padding: 2px;
-        img {
-            filter: invert(1);
+/* Single Job View */
+.topWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    border-bottom: 3px solid black;
+    margin-bottom: 20px;
+    align-items: center;
+    .titleWrapper {
+        padding-right: 20px;
+        border-right: 3px solid;
+        .title {
+            font-size: 1.65rem;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            font-style: italic;
+            font-weight: bold;
+            letter-spacing: .15rem;
+        }
+        .subtitle {
+            padding-bottom: 10px;
+            font-size: 1.45rem;
+            text-transform: uppercase;
+            font-style: italic;
+            letter-spacing: .05rem;
         }
     }
 }
-.wrapper {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 500px;
-    margin-left: 50px;
-}
-.line {
-    border-left: 3px solid var(--link-active);
-    padding-left: 11px;
-    margin: 27px 0;
-}
-.listWrapper {
+.midWrapper {
     display: flex;
     flex-flow: column nowrap;
-}
-.nonlined {
-    padding-left: 13.5px;
-}
-.listItem{
-    display: flex;
-    align-items: center;
     gap: 10px;
-    padding: 10px 0;
+    padding-left: 30px;
+    line-height: 1.55rem;
+    font-size: 1.05rem;
 }
-.listTitle {
-    font-size: 20px;
-}
-.listRole {
-    color: var(--light2);
-    font-style: italic;
-}
-a:hover, a:active {
-    .listRole {
-        color: var(--white100);
+.bottomWrapper {
+    margin-top: 20px;
+    border-top: 3px solid black;
+    display: flex;
+    .span {
+        border-right: 3px solid black;
+        padding: 10px 10px 5px;
+        font-style: italic;
+        font-size: 1.25rem;
+        letter-spacing: .05rem;
     }
 }
-.point {
-    content: '';
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    border: 3px solid var(--link-active);
-    background-color: var(--white);
-    margin-left: -20px;
+.link {
+    width: 50px;
 }
-.point:hover {
-    background-color: var(--link-active);
+.showMobile {
+   display: none; 
 }
-.tooltip {
-    background-color: var(--white) !important;
-    border: 2px solid var(--light2) !important;
-    border-radius: 15px !important;
-    color: var(--beige2) !important;
-    opacity: 1 !important;
-}
-.linkWrapper {
-    margin-bottom: -20px;
+/* List Job View */
+.wrapper {
+    margin: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    .tile:hover, .tile:focus {
+        filter: opacity(.5);
+    }
+    .tile {
+        width: 350px;
+        height: 350px;
+        position: relative;
+        .tileTitle {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            top: 0;
+            text-transform: uppercase;
+            text-wrap: pretty;
+            word-wrap: break-word;
+            font-size: 4.5rem;
+            text-align: center;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+    }
 }
 @media screen and (max-width: 600px) {
-    .wrapper {
-        width: 100%;
-        margin-left: 20px;
+    .hideMobile {
+        display: none;
     }
-    .linkWrapper {
-        width: 100%;
-        padding-top: 10px;
+    .showMobile {
+        display: flex; 
+    }
+    .topWrapper {
+        flex-flow: column;
         text-align: center;
+        justify-content: center;
+        margin: 60px 20px 20px;
+        width: 100%;
+        .titleWrapper {
+            padding: 0 0 10px;
+            border: none;
+        }
+    }
+    .midWrapper {
+        padding: 0 25px;
+    }
+    .bottomWrapper {
+        align-items: center;
+        justify-content: space-between;
+        .span {
+            border-right: 0;
+        }
+    }
+    .wrapper {
+        margin: 60px 10px;
+        .tile {
+            width: 150px;
+            height: 150px;
+            .tileTitle {
+                font-size: 2rem;
+                width: 150px;
+                height: 150px;
+            }
+        }
     }
 }

@@ -20,3 +20,22 @@ export const importArt = (r) => {
     });
     return images.sort((x, y) => (x.id > y.id ? 1 : -1));
 };
+
+export const importFiles = (r) => {
+  let images = [];
+  r.keys().forEach((key, i) => {
+    images.push({pathLong: r(key), pathShort: key, id: i})
+  });
+  return images;
+};
+
+export const fib = (n) => {
+  let phi = (1 + Math.sqrt(5))/2;
+  let asymp = Math.pow(phi, n) / Math.sqrt(5);
+  return Math.round(asymp);
+};
+
+export const degrees_to_radians = (degrees) => {
+  // Multiply degrees by pi divided by 180 to convert to radians.
+  return degrees * (Math.PI/180);
+}

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtSingle renders correctly 1`] = `
+Array [
+  <mock-Circles />,
+  <div
+    className="layout"
+  >
+    <div
+      className="navWrapper"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        href="/work"
+        onClick={[Function]}
+      >
+        Work
+      </a>
+      <a
+        href="/art"
+        onClick={[Function]}
+      >
+        Art
+      </a>
+    </div>
+    <div
+      className="navClose"
+      onClick={[Function]}
+    >
+      X
+    </div>
+    <div
+      className="navOpen visible"
+      onClick={[Function]}
+    >
+      <img
+        alt="menu"
+        src="hamburger.png"
+      />
+    </div>
+    <a
+      className="backLink"
+      href="/art"
+      onClick={[Function]}
+    >
+      <img
+        alt="back"
+        src="arrow.svg"
+      />
+    </a>
+    <div
+      className="wrapperSingle"
+    >
+      <img
+        alt="work 0"
+        className="image"
+        src="mock_long.jpg"
+        style={
+          Object {
+            "maxHeight": "calc(768px - 50px)",
+          }
+        }
+      />
+    </div>
+  </div>,
+]
+`;

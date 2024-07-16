@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import styles from './ProgressiveImage.module.css';
+import cn from 'classnames';
 
-const ProgressiveImage = ({ image, tile = false }) => {
-  const [imgSrc, setImgSrc] = useState(image.compressed.pathLong || image.pathLong);
-  const [viewportHeight, setViewportHeight] = useState(document.body.clientHeight);
+const ProgressiveImage = ({ image, art = false, tile = false, carousel = false, alt=null }) => {
+  const [imgSrc, setImgSrc] = useState(image.compressed?.pathLong || image.pathLong || image);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   useEffect(() => {
     const img = new Image();
@@ -15,16 +16,16 @@ const ProgressiveImage = ({ image, tile = false }) => {
 
   if (!tile) {
     window.addEventListener('resize', () => {
-      setViewportHeight(document.body.clientHeight);
+      setViewportHeight(window.innerHeight);
     });
   };
 
   return (
     <img
       src={imgSrc}
-      alt={`artwork ${image.id}`}
-      className={tile ? styles.tile : styles.image}
-      style={!tile ? { maxHeight: `calc(${viewportHeight}px - 50px)` } : {}}
+      alt={alt ? alt : `work ${image.id}`}
+      className={cn({[styles.tile] : tile, [styles.carousel] : carousel, [styles.image] : !(tile || carousel)})}
+      style={art ? { maxHeight: `calc(${viewportHeight}px - 50px)` } : {}}
     />
   );
 }

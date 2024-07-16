@@ -1,19 +1,30 @@
+.profileWrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
 .profile {
     width: 200px;
-    padding-bottom: 10px;
+    padding: 0 20px 15px;
+    border: 3px solid black;
+    border-top: 0;
+    border-bottom: 0;
 }
 .title {
-    text-align: center;
-    padding-bottom: 10px;
-    font-style: italic;
-    color: var(--light2);
+    padding: 20px 0 10px;
+    border-top: 3px solid black;
+    align-self: stretch;
 }
 .description {
     display: flex;
     flex-flow: column nowrap;
     gap: 10px;
-    padding-bottom: 10px;
-    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid black;
+    line-height: 1.55rem;
+    font-size: 1.05rem;
 }
 .linkButton {
     display: flex;
@@ -21,8 +32,11 @@
     height: 50px;
     margin: auto;
     color: black;
+    border: 3px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 0;
     &:active, &:hover {
-        padding: 2px;
         img {
             filter: invert(1);
         }
@@ -30,9 +44,4 @@
     img {
         height: 100%;
     }
-}
-.linkText {
-    text-align: center;
-    margin-top: -15px;
-    font-weight: bold;
 }
