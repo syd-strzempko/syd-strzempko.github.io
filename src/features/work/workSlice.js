@@ -104,9 +104,7 @@ export const slice = createSlice({
                 'Aided students and community members at a public arts & crafts resource center'
             ],
             // images: [ 'crafts_main.png', 'crafts_grass.jpg' ]
-        }
-    ],
-    projects: [
+        },
         {
             url: 'digit',
             org: 'Self-Directed',
@@ -166,15 +164,15 @@ export const slice = createSlice({
 });
 
 // List selectors
-export const selectCombined = (state) => {
-    return [ ...state.work.jobs, ...state.work.projects ];
+export const selectWork = (state) => {
+    return state.work.jobs;
 };
 
 export const selectImages = (state) => {
     return state.work.images;
 }
 
-export const selectCombinedComplete = createSelector([selectCombined, selectImages], (jobs, allImages) => {
+export const selectWorkComplete = createSelector([selectWork, selectImages], (jobs, allImages) => {
     return jobs.map(job => {
         let images = allImages?.filter((image) => image.pathShort.includes(job.url));
         return { ...job, images };
@@ -183,8 +181,7 @@ export const selectCombinedComplete = createSelector([selectCombined, selectImag
 
 // Element selectors
 export const selectSingle = (state, url) => {
-    const combined = selectCombined(state);
-    return combined.find((single) => single.url === url);
+    return state.work.jobs.find((single) => single.url === url);
 }
 
 export const selectSingleComplete = createSelector([selectSingle, selectImages], (job, allImages) => {

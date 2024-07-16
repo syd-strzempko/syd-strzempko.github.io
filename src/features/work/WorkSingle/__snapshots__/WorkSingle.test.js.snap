@@ -492,7 +492,7 @@ Array [
                     className="imageWrapper"
                   >
                     <img
-                      alt="work 0"
+                      alt="work 1"
                       className="carousel"
                       src="mock_long.jpg"
                       style={Object {}}
@@ -508,7 +508,7 @@ Array [
                     className="imageWrapper"
                   >
                     <img
-                      alt="work 0"
+                      alt="work 1"
                       className="carousel"
                       src="mock_long.jpg"
                       style={Object {}}

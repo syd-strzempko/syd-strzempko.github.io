@@ -1,25 +1,26 @@
 import { WorkList } from './WorkList';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import * as Redux from 'react-redux';
+import * as reactRedux from 'react-redux';
+import { mockStore } from '../workSlice.test';
 
-jest.mock('react-redux', () => ({
-    ...jest.requireActual('react-redux'),
-    useSelector: jest.fn()
-}));
+jest.mock('../../../components/Circles/Circles');
 
 // Note: MemoryRouter allows for nested Link components to exist inside of & access stack of mocked router
-
 describe('WorkList', () => {
-    beforeEach(() => {
-        jest.spyOn(Redux, 'useSelector').mockReturnValue([]);
-    });
-    it('renders correctly', () => {
+    // Mock useSelectors
+    beforeEach(() => { useSelectorMock.mockImplementation(selector => selector(mockStore)); });
+    afterEach(() => { useSelectorMock.mockClear(); });
+
+    const useSelectorMock = reactRedux.useSelector;
+
+    // Unit tests
+    test('renders correctly', () => {
         let view = renderer.create(
-        <MemoryRouter>
-            <WorkList />
-        </MemoryRouter>
-        );
-        expect(view.toJSON()).toMatchSnapshot();
+            <MemoryRouter>
+                <WorkList />
+            </MemoryRouter>
+        ).toJSON();
+        expect(view).toMatchSnapshot();
     });
 });

@@ -12,7 +12,7 @@ export const ArtList = () => {
       <div className={styles.wrapper}>
         {arts?.map((art) => {
           return (
-            <Link to={`/art/${art.id}`}>
+            <Link to={`/art/${art.id}`} key={art.id}>
               <div className={styles.tile} key={art.id}>
                 <ProgressiveImage image={art} tile />
               </div>
