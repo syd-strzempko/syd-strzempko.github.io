@@ -24,7 +24,11 @@ Straightforward React app built from [create-react-app](https://create-react-app
 
 ### Fibonacci Pinwheel
 
-TODO
+In the background of all pages, I have rendered a dynamic fibonacci pattern using [react-konva](https://www.npmjs.com/package/react-konva), a React-specific wrapper around [konva](https://konvajs.org/) core framework.
+
+The pattern is a minor departure from a standard fibonacci sequence; rather than { 1, 1, 2, 3, 5 ...}, it has some modification at the beginning { 1, 3, 5 ...} in order to establish the core circle pattern at the middle. Each following ring has a corresponding number of circles which are evenly distributed around the circumference of that ring.
+
+Rather than redrawing the canvas for animation, I used css keyframes to get the pulsing opacity and rotation effect seen.
 
 ### Eject Custom Workarounds & Solutions
 
@@ -94,7 +98,7 @@ Update `package.json` to include `.min.css` pattern as well:
 
 #### Canvas Workaround
 
-The dynamic fibonacci pattern seen in the background of all pages of the app was generated using [react-konva](https://www.npmjs.com/package/react-konva), a React-specific wrapper around [konva](https://konvajs.org/) core framework.
+The dynamic fibonacci pattern seen in the background of all pages of the app was generated using [react-konva](https://www.npmjs.com/package/react-konva), a React-specific wrapper around [konva](https://konvajs.org/) core framework. [(See above)](#fibonacci-pinwheel)
 
 React-konva seems to have some pretty well-known issues with Jest that manifested in a couple of ways for me:
 
